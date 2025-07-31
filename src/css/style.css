@@ -1,0 +1,208 @@
+@import url('./reset.css');
+
+:root {
+    --main-bg-color: #FFFFFF;
+    --secondary-bg-color: rgb(248, 248, 248);
+    --tertiary-bg-color: rgb(211, 211, 211);
+    --quaternary-bg-color: rgb(238, 238, 238);
+    --primary-fg-color: #000000;
+    --secondary-fg-color: #515151;
+    --youtube-red: #CC0000;
+}
+
+html {
+    font-size: 1rem;
+    background-color: var(--main-bg-color);
+    color: var(--primary-fg-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 3.5rem;
+    margin: 0rem 1rem;
+}
+
+#left {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    width: 15rem;
+}
+
+#hamburger-menu {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: inherit;
+    border: none;
+    background-color: var(--main-bg-color);
+}
+
+#hamburger-icon {
+    align-self: top;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    margin-left: 1.2rem;
+}
+
+#logo img {
+    height: 1.5rem;
+    width:fit-content;
+}
+
+#center {
+    align-self: center;
+    display: flex;
+    width: 50rem;
+    margin-left: 25rem;
+    margin-right: 15rem;
+}
+
+#search-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid 1px var(--tertiary-bg-color);
+    border-radius: 1.25rem;
+    height: 2.5rem;
+    width: 37rem;
+    background-color: var(--secondary-bg-color);
+    align-self: flex-start;
+}
+
+#white-search {
+    position: absolute;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--primary-fg-color);
+    height: inherit;
+    width: 33rem;
+    border-radius: 1.25rem 0px 0px 1.25rem;
+    border-color: var(--tertiary-bg-color);
+}
+
+#search-text input {
+    width: 28rem;
+    height: 1.5rem;
+    border: none;
+    padding-left: 1rem;
+    font-size: 1rem;
+    color: var(--primary-fg-color);
+    background-color: transparent;
+    margin-left: 1rem;
+    z-index: 1;
+}
+
+#search-text #keyboard {
+    align-self: flex-end center;
+    margin-left: 2.2rem;
+    z-index: 1;
+}
+
+#search-text #loupe {
+    align-self: flex-end center;
+    margin-left: 1.8rem;
+}
+
+#voice {
+    width: 2.5rem;
+    height: 2.5rem;
+    align-self: flex-end;
+    background-color: var(--quaternary-bg-color);
+    border-radius: 1.25rem;
+    margin-left: 1rem;
+    position: relative;
+}
+
+#microphone {
+    width: 1.2rem;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+#right {
+    display: flex;
+    align-self: right;
+    width: 12rem;
+    justify-content: space-between;
+}
+
+#create {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--quaternary-bg-color);
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+}
+
+#camera {
+    width: 1.5rem;
+    align-self: center;
+    margin-left: 1rem;
+}
+
+#criar {
+    margin-right: 1rem;
+}
+
+#notifications {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+}
+
+#bell {
+    width: 1.5rem;
+}
+
+#right #user-picture {
+    align-self: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1.25rem;
+    border: 1px solid transparent;
+    background-image: url('../images/cat-with-wry-smile-svgrepo-com.svg');
+    background-size: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+}
+
+main {
+    height: 100%;
+}
+
+#page-alignment {
+    display: flex;
+    height: 100%;
+}
+
+#left-margin, #right-margin {
+    width: 7.625rem;
+}
+
+#left-margin {
+    align-self: flex-start;
+}
+
+#right-margin {
+    align-self: flex-end;
+    size: 100;
+}
+
+
+#video-container {
+    width: fit-content;
+}
