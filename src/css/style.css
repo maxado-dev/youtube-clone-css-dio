@@ -111,11 +111,16 @@ body {
 #voice {
     width: 2.5rem;
     height: 2.5rem;
-    align-self: flex-end;
     background-color: var(--quaternary-bg-color);
     border-radius: 1.25rem;
     margin-left: 1rem;
     position: relative;
+}
+
+#voice img {
+    position: absolute;
+    top: 10%;
+    left: 10%;
 }
 
 #right {
@@ -256,8 +261,17 @@ main {
     width: fit-content;
 }
 
+
 #buttons img {
     width: 2rem;
+}
+
+#buttons > div {
+    background-color: var(--secondary-bg-color);
+    border-radius: 1.25rem;
+    border-color: transparent;
+    height: 2rem;
+    padding: 0.3rem 0.5rem;
 }
 
 #buttons div {
@@ -266,14 +280,11 @@ main {
 }
 
 .button-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
-    background-color: var(--secondary-bg-color);
-    border-radius: 1.25rem;
-    border-color: transparent;
     padding: 0rem 1rem;
     text-wrap: nowrap;
-    height: 2rem;
+    align-content: center;
 }
 
 #video-description {
@@ -281,6 +292,7 @@ main {
     padding: 1rem;
     font-size: 0.8rem;
     background-color: var(--quaternary-bg-color);
+    border-radius: 0.5rem;
 }
 
 #view-number {
@@ -308,6 +320,7 @@ main {
 }
 
 #user-interaction {
+    margin-top: 1rem;
 }
 
 #interaction-general {
@@ -332,6 +345,11 @@ main {
 
 .imgs {
     width: 2rem;
+}
+
+.imgs-more {
+    width: 1.2rem;
+    opacity: 0.7;
 }
 
 #sort-text {
@@ -372,6 +390,17 @@ main {
     border: none;
 }
 
+.button-comment {
+    background-color: var(--secondary-bg-color);
+    border-radius: 1.25rem;
+    border-color: transparent;
+    height: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 1rem;
+    align-content: center;
+}
+
 #send-interaction {
     display: flex;
     justify-content: space-between;
@@ -387,9 +416,13 @@ main {
 }
 
 #comments {
-    background-color: orange;
     display: flex;
     flex-direction: column;
+}
+
+.comment-options {
+    width: fit-content;
+    align-self: flex-start;
 }
 
 .comment {
@@ -397,17 +430,25 @@ main {
     align-items: top;
 }
 
+.comment header {
+    display: flex;
+    align-items: flex-start;
+    height: fit-content;
+    text-wrap: nowrap;
+}
+
+.comment-header {
+    display: flex;
+    align-items: flex-start;
+}
+
 .comment article {
-    background-color: silver;
     display: flex;
     flex-direction: column;
     align-items: left;
     padding: 0.5rem;
     font-size: 0.8rem;
-}
-
-.comment header {
-    height: fit-content;
+    width: 120rem;
 }
 
 .comment-header {
@@ -415,11 +456,11 @@ main {
     align-items: center;
 }
 
-.text {
+.comment article .text {
     padding: 1rem;
-    background-color: red;
     text-wrap: wrap;
-    height: 3rem;
+    height: fit-content;
+    font-size: 1rem;
 }
 
 .comment-name span b {
@@ -432,25 +473,71 @@ main {
 }
 
 .comment-photo {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 1.25rem;
+    width: 4rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    background-image: radial-gradient(rgb(177, 9, 9), rgb(226, 138, 138));
+    background-size: 4rem;
     border: 1px solid transparent;
-    background-color: lightblue;
-    background-size: 3rem;
     background-position: center;
     background-repeat: no-repeat;
-    background-origin: padding-box;
+    background-origin: border-box;
 }
 
-.comment header {
+.comment footer {
+    padding-top: 0.5rem;
     display: flex;
     align-items: center;
-    text-wrap: nowrap;
 }
 
-.comment-header {
+.comment aside {
     display: flex;
+}
+
+.comment aside div {
+    display: flex;
+    align-items: center;
+    margin-top: 0.2rem;
+    margin-left: 0.3rem;
+}
+
+.comment aside img {
+    margin-right: 0.5rem;
+}
+
+.comment aside div span {
+    font-size: 0.8rem;
+}
+
+.comment footer img {
+    width: 1rem;
+    margin-left: 1rem;
+}
+
+.comment footer .comment-likes {
+    display: flex;
+    align-items: center;
+}
+
+.comment footer div span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--secondary-fg-color);
+    margin-left: 0.5rem;
+    text-align: center;
+}
+.comment footer div span b {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--secondary-fg-color);
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-self: center;
+}
+
+.comment footer .comment-deslikes {
+    display: flex;
+    align-items: center;
 }
 
 #side-content {
@@ -459,26 +546,52 @@ main {
     align-items: flex-start;
     padding-top: 1.6rem;
     width: 25rem;
-    background-color: lightcoral;
 }
 
 #ad {
-    background-color: green;
-    height: 9.5rem;
+    height: 20rem;
     width: 25rem;
     margin-bottom: 2rem;
+    align-items: center;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top, rgb(255, 223, 81), rgb(78, 31, 3)); 
+    border-image-slice: 1;
+    border-radius: 2rem;
+    background-image: url('../images/linkedin.png');
+    background-size: cover;
+    background-position: top -8rem left 2.3rem;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-attachment:local;
+}
+
+#ad-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    margin-top: 12rem;
+}
+
+#ad-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+#ad-body {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
 }
 
 #recommended {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    background-color: skyblue;
     width: inherit;
 }
 
 #recommended-filters {
-    background-color: fuchsia;
     display: flex;
     align-content: space-between;
     flex-wrap: nowrap;
@@ -510,14 +623,91 @@ main {
     flex-direction: column;
     justify-content: space-around;
     gap: 1rem;
-    background-color: indigo;
     margin-top: 1rem;
+    width: inherit;
+}
+
+.recommended-video-container {
+    height: inherit;
+    position: relative;
+}
+
+.recommended-video-container img {
+    margin: auto 0;
+    border-radius: 0.4rem;
+}
+
+.video-duration {
+    position: absolute;
+    height: 1.2rem;
+    bottom: 10%;
+    right: 5%;
+    background-color: rgba(17, 17, 17, 0.836);
+    border-radius: 0.3rem;
+}
+
+.video-duration span {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.3rem;
+    color: var(--main-bg-color);
 }
 
 .recommended-video {
-    background-color: goldenrod;
-    height: 5.9rem;
-    width: inherit;
+    height: 6.5rem;
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.recommended-video > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.recommended-text {
+    display: flex;
+    width: 12rem;
+}
+
+
+.recommended-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    padding: 0rem 0.5rem;
+    width: fit-content;
+}
+
+.recommended-channel {
+    font-size: 0.8rem;
+    color: var(--secondary-fg-color);
+    padding: 0rem 0.5rem;
+}
+
+.recommended-numbers {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    padding: 0rem 0.5rem;
+    width: fit-content;
+}
+
+.recommended-numbers div {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--secondary-fg-color);
+    text-wrap: nowrap;
 }
 
 #page-alignment {
