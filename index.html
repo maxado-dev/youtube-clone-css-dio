@@ -11,76 +11,136 @@
         <div id="left">
             <button id="hamburger-menu" aria-label="Menu">
                 <span id="hamburger-icon">
-                    <img src="./src/images/menu.svg" alt="">
+                    <img class="imgs" src="./src/images/menu.svg" alt="">
                 </span>
             </button>
             <div id="logo">
-                <img src="./src/images/youtube-logo.svg" alt="">
+                <img class="imgs" src="./src/images/youtube-logo.svg" alt="">
             </div>
         </div>
         <div id="center">
             <div id="search-text">
                 <input type="text">
                 <div id="white-search"></div>
-                <img id="keyboard" src="./src/images/tia.png">
-                <img id="loupe" src="./src/images/search.svg">
+                <img class="imgs" src="./src/images/tia.png">
+                <img class="imgs" src="./src/images/search.svg">
             </div>
             <div id="voice">
-            <img id="microphone" src="./src/images/microphone-alt-1-svgrepo-com.svg" alt="">
+            <img class="imgs" src="./src/images/microphone-alt-1-svgrepo-com.svg" alt="">
             </div>
         </div>
         <div id="right">
             <div id="create">
-                <img id="camera" src="./src/images/camera-outlined-svgrepo-com.svg" alt="">
+                <img class="imgs" src="./src/images/camera-svgrepo-com.svg" alt="">
                 <span id="criar">Criar</span>
             </div>
             <div id="notifications">
-                <img id="bell" src="./src/images/bell-svgrepo-com.svg" alt="">
+                <img class="imgs" src="./src/images/bell-svgrepo-com.svg" alt="">
             </div>
             <div id="user-picture">
             </div>
         </div>
     </header>
     <div id="page-alignment">
-        <div id="left-margin">
-        </div>
         <main>
             <section id="video-container">
                 <iframe width="1236" height="695" src="https://www.youtube.com/embed/VKmPGmFY7H4?si=7EF6MnIgAr-aAdoF&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
-            <section id="video-info">
+            <section id="video-about">
                 <div id="video-title">
-
+                    <span>A História do Front-End para Iniciantes em Programação | Série "Começando aos 40"</span>
                 </div>
-                <div id="channel-info">
-
+                <div id="video-info">
+                    <div id="channel">
+                        <div id="channel-picture">
+                        </div>
+                        <div id="channel-info">
+                            <div id="channel-name">
+                                <span>Fabio Akita</span>
+                            </div>
+                            <div id="subscribers">
+                                <span>
+                                    519 mil inscritos
+                                </span>
+                            </div>
+                        </div>
+                        <div id="subscription">
+                            <img class="imgs" src="./src/images/bell-svgrepo-com.svg" alt="">
+                            <span class="button-text">
+                                Inscrito
+                            </span>
+                            <div id="arrow-down">
+                                <img class="imgs" src="./src/images/arrow-down-svgrepo-com.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="buttons">
+                        <div id="like">
+                            <img class="imgs" src="./src/images/thumbsup.svg" alt="">
+                            <span class="button-text">
+                                32 mil
+                            </span>
+                        </div>
+                        <div id="deslike">
+                            <img class="imgs" src="./src/images/thumbs-down.svg" alt="">
+                        </div>
+                        <div id="share">
+                            <img class="imgs" src="./src/images/share-2.svg" alt="">
+                            <span class="button-text">
+                                Compartilhar
+                            </span>
+                        </div>
+                        <div id="download">
+                            <img class="imgs" src="./src/images/download.svg" alt="">
+                            <span class="button-text">
+                                Download
+                            </span>
+                        </div>
+                        <div id="clip">
+                            <img class="imgs" src="./src/images/scissor-svgrepo-com.svg" alt="">
+                            <span class="button-text">
+                                Clipe
+                            </span>
+                        </div>
+                        <div id="etc">
+                            <span class="button-text">
+                                ...
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="video-description">
                 <span id="view-number">
-
+                    444 mil visualizações
                 </span>
                 <span id="posted-when">
-
+                    há 6 anos
                 </span>
                 <span id="playlist">
-
+                    Programação para Iniciantes
                 </span>
                 <div id="description">
+                    Este episódio vai testar a paciência de vocês. Desta vez quero explorar um pouco os diversos assuntos que são associados com a tal carreira de "Front-End" no mundo de desenvolvimento Web.
 
+Se já começaram a estudar o assunto devem ter visto que existe uma infinidade de sopas de letrinhas, coisas como SASS, CSS, React, Vue, e muito mais. Por que existem tantas letrinhas assim? Quais escolher?
+
+Obs: eu fico falando "Webpacker" o tempo todo mas na verdade é "Webpack" sorry :-)
                 </div>
             </section>
             <section id="user-interaction">
                 <div id="interaction-general">
                     <div id="comment-numbers">
-
+                        1.238 comentários
                     </div>
                     <div id="sort">
                         <div id="sort-icon">
-
+                            <img class="imgs" src="./src/images/sort-svgrepo-com.svg" alt="">
                         </div>
                         <div id="sort-text">
-
+                            <span>
+                                Ordenar por
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -92,24 +152,111 @@
                         <input type="text" aria-placeholder="Adicione um comentário...">
                     </div>
                 </div>
+                <div id="send-interaction">
+                    <div id="send-emoji">
+                        <img class="imgs" src="./src/images/happy-smile-laugh-emoji-emoticon-2-svgrepo-com.svg" alt="">
+                    </div>
+                    <div id="confirm-interaction">
+                        <button class="button-text">
+                            Cancelar
+                        </button>
+                        <button disabled class="button-text">
+                            Comentar
+                        </button>
+                    </div>
+                </div>
             </section>
             <section id="comments">
                 <div class="comment">
-
+                    <div class="comment-photo">
+                    </div>
+                    <article>
+                        <header>
+                            <div class="comment-header">
+                                <div class="comment-name">
+                                    <span>
+                                        <b>
+                                            Fulano da Silva
+                                        </b>
+                                    </span>
+                                </div>
+                                <div class="commented-when">
+                                    <span>
+                                        há 4 anos
+                                    </span>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat tempore corrupti officiis non? Nihil, voluptate? Molestias voluptate eius tempore beatae doloribus explicabo. Voluptatibus id debitis delectus enim molestiae deserunt. Veniam?
+                        </div>
+                        <footer>
+                            <div class="comment-likes">
+                                <span>
+                                    1,6 mil
+                                </span>
+                            </div>
+                            <div class="comment-deslikes">
+                            </div>
+                            <div class="answer">
+                                <span>
+                                    <b>Responder</b>
+                                </span>
+                            </div>
+                        </footer>
+                        <aside>
+                            <div class="expand">
+                                <div class="arrowdown">
+                                </div>
+                                <div>
+                                    <span>
+                                        <b>27 respostas</b>
+                                    </span>
+                                </div>
+                            </div>
+                        </aside>
+                    </article>
                 </div>
-
             </section>
         </main>
-        <aside id="ad">
-
+        <aside id="side-content">
+            <aside id="ad">
+            </aside>
+            <aside id="recommended">
+                <div id="recommended-filters">
+                    <button>
+                        Todos
+                    </button>
+                    <button>
+                        Da mesma série
+                    </button>
+                    <button>
+                        De Fabio Akita
+                    </button>
+                    <button>
+                        Desenvolvimento Web
+                    </button>
+                </div>
+                <div id="recommendations">
+                    <div class="recommended-video">
+                    </div>
+                    <div class="recommended-video">
+                    </div>
+                    <div class="recommended-video">
+                    </div>
+                    <div class="recommended-video">
+                    </div>
+                    <div class="recommended-video">
+                    </div>
+                    <div class="recommended-video">
+                    </div>
+                    <div class="recommended-video">
+                    </div>
+                    <div class="recommended-video">
+                    </div>
+                </div>
+            </aside>
         </aside>
-        <aside id="recommended">
-            <div class="recommended-video">
-            </div>
-
-        </aside>
-        <div id="right-margin">
-        </div>
     </div>
 </body>
 </html>

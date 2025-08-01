@@ -24,6 +24,16 @@ header {
     margin: 0rem 1rem;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.imgs {
+    width: 2rem;
+}
+
 #left {
     display: flex;
     align-items: center;
@@ -98,17 +108,6 @@ header {
     z-index: 1;
 }
 
-#search-text #keyboard {
-    align-self: flex-end center;
-    margin-left: 2.2rem;
-    z-index: 1;
-}
-
-#search-text #loupe {
-    align-self: flex-end center;
-    margin-left: 1.8rem;
-}
-
 #voice {
     width: 2.5rem;
     height: 2.5rem;
@@ -117,13 +116,6 @@ header {
     border-radius: 1.25rem;
     margin-left: 1rem;
     position: relative;
-}
-
-#microphone {
-    width: 1.2rem;
-    position: absolute;
-    top: 25%;
-    left: 25%;
 }
 
 #right {
@@ -144,14 +136,10 @@ header {
     border-radius: 1.25rem;
 }
 
-#camera {
-    width: 1.5rem;
-    align-self: center;
-    margin-left: 1rem;
-}
-
 #criar {
     margin-right: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
 #notifications {
@@ -161,10 +149,6 @@ header {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 1.25rem;
-}
-
-#bell {
-    width: 1.5rem;
 }
 
 #right #user-picture {
@@ -181,28 +165,366 @@ header {
 }
 
 main {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 1.6rem;
+    width: 78.7rem;
+}
+
+#video-container {
+}
+
+#video-container iframe {
+    border-radius: 0.8rem;
+}
+
+#video-about {
+}
+
+#video-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#channel {
+}
+
+#video-title {
+    padding-top: 0.5rem;
+}
+
+#video-title span {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+#channel {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#channel-picture {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid transparent;
+    background-image: url('../images/akita.jpg');
+    background-size: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+}
+
+#channel-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+#channel-name span { 
+    font-size: 1rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+
+#subscribers span {
+    font-size: 0.8rem;
+    color: var(--secondary-fg-color);
+    text-wrap: nowrap;
+}
+
+#subscription {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    background-color: var(--secondary-bg-color);
+    padding: 0.2rem 1rem;
+    padding-right: 1rem;
+    border-radius: 2rem;
+}
+
+#subscription img {
+    width: 2rem;
+}
+
+#buttons {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+#buttons img {
+    width: 2rem;
+}
+
+#buttons div {
+    display: flex;
+    align-items: center;
+}
+
+.button-text {
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--secondary-bg-color);
+    border-radius: 1.25rem;
+    border-color: transparent;
+    padding: 0rem 1rem;
+    text-wrap: nowrap;
+    height: 2rem;
+}
+
+#video-description {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+    background-color: var(--quaternary-bg-color);
+}
+
+#view-number {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+#posted-when {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+#playlist {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--secondary-fg-color);
+}
+
+#description {
+    line-height: 1rem;
+    font-size: 0.8rem;
+    white-space: pre-line;
+    overflow-y: scroll;
+    height: 5rem;
+}
+
+#user-interaction {
+}
+
+#interaction-general {
+    display: flex;
+    align-items: flex-end;
+}
+
+#comment-numbers {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#sort {
+    display: flex;
+    align-items: center;
+    margin-left: 2.5rem;
+}
+
+#sort img {
+    width: 2rem;
+}
+
+.imgs {
+    width: 2rem;
+}
+
+#sort-text {
+    margin-left: 0.5rem;
+}
+
+#sort-text span {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+#write-comment {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+#user-picture {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1.25rem;
+    border: 1px solid transparent;
+    background-image: url('../images/cat-with-wry-smile-svgrepo-com.svg');
+    background-size: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+}
+
+#comment-box {
+    margin-left: 1rem;
+    width: 100%;
+    border-bottom: 1px solid silver;
+}
+
+#comment-box input {
+    width: inherit;
+    border: none;
+}
+
+#send-interaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3rem;
+    height: 2.5rem;
+}
+
+#confirm-interaction {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+#comments {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment {
+    display: flex;
+    align-items: top;
+}
+
+.comment article {
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.comment header {
+    height: fit-content;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    padding: 1rem;
+    background-color: red;
+    text-wrap: wrap;
+    height: 3rem;
+}
+
+.comment-name span b {
+    font-size: 1rem;
+}
+
+.commented-when span {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.comment-photo {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1.25rem;
+    border: 1px solid transparent;
+    background-color: lightblue;
+    background-size: 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+}
+
+.comment header {
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
+.comment-header {
+    display: flex;
+}
+
+#side-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1.6rem;
+    width: 25rem;
+    background-color: lightcoral;
+}
+
+#ad {
+    background-color: green;
+    height: 9.5rem;
+    width: 25rem;
+    margin-bottom: 2rem;
+}
+
+#recommended {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    background-color: skyblue;
+    width: inherit;
+}
+
+#recommended-filters {
+    background-color: fuchsia;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    gap: 0.5rem;
+    height: fit-content;
+    width: inherit;
+    overflow-x: auto;
+    padding: 0.5rem 0rem;
+}
+
+#recommended-filters button {
+    background-color: var(--tertiary-bg-color);
+    border-color: transparent;
+    font-size: 0.9rem;
+    font-weight: 500;
+    height: 2rem;
+    border-radius: 0.5rem;
+    padding: 0rem 0.5rem;
+}
+
+#recommended-filters button:first-of-type {
+    background-color: var(--primary-fg-color);
+    color: var(--main-bg-color);
+}
+
+#recommendations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    background-color: indigo;
+    margin-top: 1rem;
+}
+
+.recommended-video {
+    background-color: goldenrod;
+    height: 5.9rem;
+    width: inherit;
 }
 
 #page-alignment {
     display: flex;
-    height: 100%;
-}
-
-#left-margin, #right-margin {
-    width: 7.625rem;
-}
-
-#left-margin {
-    align-self: flex-start;
-}
-
-#right-margin {
-    align-self: flex-end;
-    size: 100;
-}
-
-
-#video-container {
-    width: fit-content;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 105.7rem;
+    margin: 0 auto;
 }
