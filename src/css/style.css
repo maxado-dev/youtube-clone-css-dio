@@ -116,9 +116,9 @@ body {
 
 #search-text #search-icon {
     order: -1;
-    position:absolute;
-    right: 35.7%;
+    position: relative;
     opacity: 50%;
+    left: 34rem;
     width: 1.5rem;
 }
 
