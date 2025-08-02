@@ -108,6 +108,20 @@ body {
     z-index: 1;
 }
 
+#white-search #tia {
+    position: absolute;
+    right: 0.5rem;
+    top: 25%;
+}
+
+#search-text #search-icon {
+    order: -1;
+    position:absolute;
+    right: 35.7%;
+    opacity: 50%;
+    width: 1.5rem;
+}
+
 #voice {
     width: 2.5rem;
     height: 2.5rem;
@@ -121,6 +135,7 @@ body {
     position: absolute;
     top: 10%;
     left: 10%;
+    opacity: 60%;
 }
 
 #right {
